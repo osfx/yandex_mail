@@ -4,7 +4,7 @@ require 'yaml'
 
 def smtp_config
   file = File.expand_path('~/.yandexmail')
-  raise "No configuration file found! Please provide one at #{file}" unless File.exists? file
+  raise " \e[0;31m\No configuration file found! Please create \e[0;32m\ #{file} \e[0m\ " unless File.exists? file
   @config ||= YAML::load(File.open(file))
 end
 
