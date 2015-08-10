@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.email       = ["x66w@ya.ru"]
   s.homepage    = "http://github.com/sanata-/yandex_mail"
   s.license     = "MIT"
-  s.add_dependency "actionmailer", "~> 3.0", ">= 3.0.7"
+  s.add_dependency "actionmailer", "= 3.0.7"
 
 
   s.summary     = %q{CLI mailer for for sending email via Yandex SMTP server}
@@ -19,5 +19,5 @@ Gem::Specification.new do |s|
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/yandex_mail`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
-  s.required_ruby_version = '>= 1.9.3'
+  s.required_ruby_version = '>= 1.8.7'
 end
