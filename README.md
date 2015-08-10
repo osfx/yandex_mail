@@ -8,10 +8,10 @@ Install ruby gem
 gem install yandex_mail
 ```
 
-Create config file in your home directory called .yandex_mail
+Create config file in your home directory called .yandexmail
 
 ```yaml
-# ~/.yandex_mail
+# ~/.yandexmail
 
 user_name:  yourname@yandex.ru
 password:   your_password

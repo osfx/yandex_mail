@@ -3,7 +3,7 @@ require 'action_mailer'
 require 'yaml'
 
 def smtp_config
-  file = File.expand_path('~/.yandex_mail')
+  file = File.expand_path('~/.yandexmail')
   raise "No configuration file found! Please provide one at #{file}" unless File.exists? file
   @config ||= YAML::load(File.open(file))
 end
