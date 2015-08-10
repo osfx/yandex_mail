@@ -10,10 +10,8 @@ gem install yandex_mail
 ```
 
 #### 2. Create config file in your home directory called .yandexmail
-```yaml
-# ~/.yandexmail
-user_name:  yourname@yandex.ru
- password:  your_password
+```sh
+echo -e "user_name: youremail@yandex.ru\n password: your_password" > ~/.yandexmail
 ```
 #### 3. Send mail
 ```yaml
