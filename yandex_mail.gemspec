@@ -10,7 +10,6 @@ Gem::Specification.new do |s|
   s.homepage    = "http://github.com/sanata-/yandex_mail"
   s.license     = "MIT"
   s.add_dependency "actionmailer", "~> 3.0", ">= 3.0.7"
-  s.add_dependency "yaml", "~> 3.0", ">= 3.0.7"
 
 
   s.summary     = %q{CLI mailer for for sending email via Yandex SMTP server}
