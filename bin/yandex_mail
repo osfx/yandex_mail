@@ -1,28 +1,16 @@
-require 'rubygems'
-require 'action_mailer'
-require 'yaml'
+#!/usr/bin/env ruby
 
-def smtp_config
-  file = File.expand_path('~/.yandex_mail')
-  raise "No configuration file found! Please provide one at #{file}" unless File.exists? file
-  @config ||= YAML::load(File.open(file))
+if ARGV.length != 3
+  puts "Usage: #{File.basename(__FILE__)} 'recipient' 'email subject' 'email body'"
+  Process.exit
 end
 
-ActionMailer::Base.delivery_method = :smtp
-ActionMailer::Base.smtp_settings = {
-  :address => "smtp.yandex.ru",
-  :port => 587,
-  :domain => "yandex.ru",
-  :authentication => :plain,
-  :user_name => smtp_config["user_name"],
-  :password => smtp_config["password"]
-}
+$LOAD_PATH.unshift File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib'))
+require 'yandex_mail'
 
-class Yamail < ActionMailer::Base
-  def line(t, sub, mess)
-    from smtp_config["user_name"]
-    recipients t
-    subject "#{sub}"
-    body "#{mess}"
-  end
-end
+to = ARGV[0]
+msg = ARGV[1]
+txt = ARGV[2]
+
+Yamail.line(to, msg, txt).deliver
+puts "\e[1;32m\OK: Email sent to : \e[1;31m\ #{to}"
