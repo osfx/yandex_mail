@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 if ARGV.length != 3
-  puts "\e[1;32m\ Usage:\[\e[0m\ #{File.basename(__FILE__)} recipient@email.com \"email subject\" \"email body\""
+  puts "\e[1;32m\ Usage: \e[0m\ #{File.basename(__FILE__)} recipient@email.com \"email subject\" \"email body\""
   Process.exit
 end
 
