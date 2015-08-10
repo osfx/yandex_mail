@@ -1,40 +1,29 @@
 # yandex_mail 
 CLI email sender over Yandex SMTP
 
+***
 ## Three simple steps
-### 1. Install ruby gem
+#### 1. Install ruby gem
 
 ```ruby
 gem install yandex_mail
 ```
 
-### 2. Create config file in your home directory called .yandexmail
-
+#### 2. Create config file in your home directory called .yandexmail
 ```yaml
 # ~/.yandexmail
 user_name:  yourname@yandex.ru
  password:  your_password
-
 ```
-### 3. Send mail
-```
+#### 3. Send mail
+```yaml
 yandex_mail recipient@email.com 'email subject' 'email body'
 ```
 
+***
 ## You will see something like that
+
 ![example](http://imgr.es/37UH)
-
-
-
-
-
-
-
-
-
-
-
-
 
 ***
 ### License
