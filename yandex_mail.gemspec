@@ -3,7 +3,7 @@ require "version"
 
 Gem::Specification.new do |s|
   s.name        = "yandex_mail"
-  s.version     = Yamail::VERSION
+  s.version     = Yandex_mail::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Peter Boriskin"]
   s.email       = ["x66w@ya.ru"]

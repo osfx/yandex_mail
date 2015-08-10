@@ -18,7 +18,7 @@ ActionMailer::Base.smtp_settings = {
   :password => smtp_config["password"]
 }
 
-class Yamail < ActionMailer::Base
+class Yandex_mail < ActionMailer::Base
   def line(t, sub, mess)
     from smtp_config["user_name"]
     recipients t

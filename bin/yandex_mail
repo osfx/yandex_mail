@@ -12,5 +12,5 @@ to = ARGV[0]
 msg = ARGV[1]
 txt = ARGV[2]
 
-Yamail.line(to, msg, txt).deliver
+Yandex_mail.line(to, msg, txt).deliver
 puts "\e[1;32m\OK: Email sent to : \e[1;31m\ #{to}"
