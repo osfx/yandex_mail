@@ -1,5 +1,5 @@
-# Yamail
-Mail sebder over Yandex SMTP server
+# yandex_mail 
+Mail sender over Yandex SMTP server
 
 ## Installation
 Install ruby gem
