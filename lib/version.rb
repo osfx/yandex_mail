@@ -1,3 +1,3 @@
-class Yandex_mail
-  VERSION = "0.0.3"
+class Yandexmail
+  VERSION = "0.0.1"
 end
