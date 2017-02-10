@@ -1,28 +1,38 @@
-require 'rubygems'
-require 'action_mailer'
+require "httparty"
+
+require "yandex_mail/version"
+require "yandex_mail/client"
+# require "yandex_mail/email"
+# require "yandex_mail/mailbox"
+#
+# require "yandex_mail/model/base"
+# require "yandex_mail/model/email"
 require 'yaml'
+require "httparty"
+# # require 'pry'
+# require "virtus"
 
-def smtp_config
-  file = File.expand_path('~/.yandex_mail')
-  raise "No configuration file found! Please provide one at #{file}" unless File.exists? file
-  @config ||= YAML::load(File.open(file))
-end
-
-ActionMailer::Base.delivery_method = :smtp
-ActionMailer::Base.smtp_settings = {
-  :address => "smtp.yandex.ru",
-  :port => 587,
-  :domain => "yandex.ru",
-  :authentication => :plain,
-  :user_name => smtp_config["user_name"],
-  :password => smtp_config["password"]
-}
-
-class Yamail < ActionMailer::Base
-  def line(t, sub, mess)
-    from smtp_config["user_name"]
-    recipients t
-    subject "#{sub}"
-    body "#{mess}"
-  end
+module YandexMail
+  # autoload :Client, 'yandex_mail/client'
+  # class << self
+  #
+  #
+  # # autoload :Email, 'yandex_mail/email'
+  # def initialize
+  #   @mailbox = Email.new
+  # end
+  #
+  #
+  # def email
+  #   YandexMail::Email.new
+  # end
+  #
+  #
+  # def mailbox
+  #   @mailbox || YandexMail::Mailbox.new
+  # end
+  # # def self.email
+  # #   YandexMail::Email.new
+  # #
+  # end
 end
