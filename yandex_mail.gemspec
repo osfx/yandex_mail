@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = "yandex_mail"
   spec.version       = YandexMail::VERSION
   spec.authors       = ["osfx"]
-  spec.email         = ["osfx@protonmail.ch"]
+  spec.email         = ["osfx@yandex.com"]
 
   spec.summary       = %q{Write a short summary, because Rubygems requires one.}
   spec.description   = %q{Write a longer description or delete this line.}

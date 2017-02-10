@@ -1,21 +1,6 @@
 #!/usr/bin/env ruby
 
 require "yandex_mail"
-require "securerandom"
-@email = YandexMail.email
 
-# @email = @yandex.list
-
-# @box = YandexMail::Mailbox.new
-
-# Pry.start
-# p @box.attributes
-@m = YandexMail.mailbox
-@hash = SecureRandom.uuid
-@password = SecureRandom.uuid
-@m.login = @hash
-@m.password = @password
-p @m
-mail = YandexMail::Model::Email.new(login: "user-login", id: @hash)
-
-p mail
+client = YandexMail::Client.new
+p client.mailboxes

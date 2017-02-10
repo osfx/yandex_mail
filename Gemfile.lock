@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    yandex_mail (1.0.0)
+    yandex_mail (0.3.0)
       httparty
       virtus
 
