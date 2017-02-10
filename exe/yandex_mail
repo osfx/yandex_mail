@@ -3,7 +3,5 @@
 require "yandex_mail"
 
 client = YandexMail::Client.new
-# p client.edit(login: 'client', password: 'secret2')
-# p client.remove uid: 1130000023174703
-p client.mailbox.messages(uid: 1130000023155627)
-p client.mailbox.list
+
+p client.ml.subscribers(maillist: 'info')

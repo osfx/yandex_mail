@@ -6,8 +6,9 @@ module YandexMail
 				self
 			end
 
-			def add(options = {})
+			def create(options = {})
 				response = self.class.post("/email/add", { query: options })
+				response.parsed_response
 			end
 
 			def edit(options = {})

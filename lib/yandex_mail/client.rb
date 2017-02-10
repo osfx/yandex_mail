@@ -1,10 +1,11 @@
+require "yandex_mail/client/mailing_list"
 require "yandex_mail/client/mailboxes"
 
 module YandexMail
 	class Client
 		include HTTParty
 		include YandexMail::Client::Mailboxes
-
+		include YandexMail::Client::MailingList
 
 		base_uri "https://pddimp.yandex.ru/api2/admin/"
 		format :json
